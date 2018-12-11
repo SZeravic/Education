@@ -20,7 +20,7 @@
    > npm start
    ```
 
-   Alternativno:
+   Alternative:
 
    ```console
    > gatsby develop
