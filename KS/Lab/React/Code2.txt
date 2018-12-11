@@ -1,0 +1,29 @@
+import React from "react";
+
+const my_array = ["C#", "Java", "javaScript", "Python"];
+const MY_ARRAY = my_array.map(function(element) {
+    return (
+        <div key={element} style={{color: "orange"}}>{element}</div>
+    );
+});
+
+function Title(props) {
+  console.log(props);
+  const { text = "Default title" } = props;
+  const { tezinaFonta = "700" } = props;
+  return <h1 className="moja_css_klasa" style={{ fontWeight: tezinaFonta }}>{text}</h1>;
+}
+
+function Subtitle(props) {
+    return <Title tezinaFonta={300} {...props} />
+}
+
+function MyComponent() {
+  return <><Title text={"React intro"} />
+  <Title text={"First steps into..."} tezinaFonta={300} />
+  <Subtitle text={"React intro 2"} />
+  {MY_ARRAY} </>
+}
+
+export default MyComponent;
+export { Title };

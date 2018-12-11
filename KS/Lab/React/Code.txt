@@ -1,0 +1,62 @@
+import React from "react";
+;
+export default MyComponent;
+export { Title };
+
+const my_array = ["C#", "Java", "JavaScript", "Python"];
+const MY_ARRAY = my_array.map(function(element) {
+    return(
+        <div key={element} style={{color: "orange"}}>{element}</div> // React nepodrzava queirry na ovaj nacin
+        // Key je potreban da react bolje optimizira koju komponentu treba obojat
+    )
+});
+
+function Title(props) { // Props - Argumenti koje funkcija prima
+    // console.log(props);
+    // return (
+    //     <h1>{ props.text }</h1>  // Moramo koristit zagrade kako bi JSX zna da cita value
+    // )
+
+    const { text = "Default title " } = props;
+    const { tezinaFonta = 700 } = props;
+    return <h1 style={{fontWeight: tezinaFonta}}> {text}</h1> //React zahtjeva da style primi object
+}
+
+function Subtitle(props) {
+    return <Title tezinaFonta={300} {...props}/> // Spread Operator
+}
+
+// function Section({ children }) {}
+function Section(props) {
+    console.log(props);
+    const { children } = props;
+    return <div style={{
+        marginTop: "4rem",
+        paddingLeft: "2rem",
+        border: "2px solic orange"
+    }}>{children}</div>
+}
+
+function MyComponent() {
+    return (
+        // <h1>React intro</h1> //JSX Language
+        // <Title></Title>
+        // "<>" Wrapper - Fragment koji omogucava da react svati da vracamo samo jedan element
+        // jer ne podrzava da react prima vise od 1 elementa.
+        <>
+            <Section>
+                <Title text ={"React intro"}/> 
+                <Title text ={"Drugi Naslov"} tezinaFonta={300}/>
+                <Subtitle text ={"Subtitle"}/>
+            </Section>
+
+            {MY_ARRAY}
+
+            <Section>
+                <Title text ={"Treci Nasliv"}/> 
+                <Title text ={"Cetvrti Naslov"} tezinaFonta={300}/>
+                <Subtitle text ={"Subtitle 2"}/>
+            </Section>
+        </>
+    )
+}
