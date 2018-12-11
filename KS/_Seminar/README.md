@@ -1,11 +1,10 @@
 # Creating Gatsby Website <!-- omit in toc -->
 
 <!-- markdownlint-disable MD007 -->
-
 <!-- - [Overview](#overview) -->
-- [How to run demo](#How to run demo)
+- [How to run](#How-to-run)
 
-## How to run demo
+## How to run
 
 1. Enter Directory `/public_html`.
 
