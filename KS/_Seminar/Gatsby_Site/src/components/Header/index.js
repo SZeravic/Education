@@ -2,6 +2,14 @@ import React from "react";
  import Nav from "./Nav";
  import NavLink from "./NavLink";
 
+export default () => (
+    <header class="items">
+    <Nav>
+        <NavLink/>
+    </Nav>
+    </header>
+)
+
 //  export default () => (
 //      <header className={styles.Header}>
 //          <Container className={styles.Container}>
@@ -14,11 +22,3 @@ import React from "react";
 //          </Container>
 //      </header>
 //  );
-
-export default () => (
-    <header class="items">
-    <Nav>
-        <NavLink/>
-    </Nav>
-    </header>
-)

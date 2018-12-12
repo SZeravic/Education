@@ -43,7 +43,9 @@ header #logo {
 nav
 {
 	/* No need to be used atm */
-	/* background-color: rgb(28, 218, 123);	 */
+	display: flex;
+	justify-content: flex-end;
+	background-color: rgb(28, 218, 123);	
 }
 
 ul.nav-bar {

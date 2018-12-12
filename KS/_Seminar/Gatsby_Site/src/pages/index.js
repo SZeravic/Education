@@ -1,8 +1,11 @@
 import React from "react";
-import { Layout } from "../components";
-/* eslint-disable */
+import { _Layout } from "../components";
 import "../styles/style.css";
+/* eslint-disable */
 
  export default () => (
-     <Layout/>
+    <_Layout>
+        <h1>My first Gatsby app</h1>
+        <p>Hello, World!</p>
+    </_Layout>
  );
