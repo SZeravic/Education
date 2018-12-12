@@ -4,7 +4,7 @@ import "../styles/style.css";
 
  export default () => (
     <Layout>
-        <h1>Home Screen!</h1>
+        <h1>Prijava</h1>
         <p>Hello, World!</p>
     </Layout>
  );
