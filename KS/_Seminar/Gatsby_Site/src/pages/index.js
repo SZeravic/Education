@@ -1,9 +1,8 @@
 import React from "react";
-import { Site } from "../components";
+import { Layout } from "../components";
 /* eslint-disable */
 import "../styles/style.css";
 
  export default () => (
-     <Site>
-     </Site>
+     <Layout/>
  );

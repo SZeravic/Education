@@ -1,9 +1,10 @@
 import React from "react";
+import Header from "../Header";
 /* eslint-disable */
 
 export default () => (
     <div class="site">
-        <p>Inside Site Div!</p>
+    <p> Entering .Site Div</p>
         <header class="items">
                 <div id="logo">
                     <a> Sustav Za Zapošljavanje </a> 
@@ -18,6 +19,7 @@ export default () => (
                     </ul>
                 </nav>
             </header>
+            {/* <Header/> */}
 
             <section class="items">
             </section>
@@ -68,5 +70,6 @@ export default () => (
             </aside>
 
             <footer class="items">Footer</footer>    
+            <p> Exiting .Site Div</p>
     </div>
 );
