@@ -1,3 +1,9 @@
-import React from "react"
+import React from "react";
+import { Site } from "../components";
+/* eslint-disable */
+import "../styles/style.css";
 
-export default () => <div>Hello world!</div>
+ export default () => (
+     <Site>
+     </Site>
+ );

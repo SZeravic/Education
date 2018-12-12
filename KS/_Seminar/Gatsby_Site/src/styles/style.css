@@ -1,0 +1,283 @@
+* { box-sizing: border-box; }
+
+body
+{
+	background-color: rgb(66, 154, 160);
+	border: 2px solid rgb(255, 255, 255);
+	font-size: 24px;
+}
+
+.site
+{
+	display: grid;
+	background-color: rgb(91, 43, 168);
+	
+	grid-gap: 20px;
+	grid-template-columns: 3fr 1fr 1fr;
+	grid-template-rows: 65px 180px auto 40px;
+	grid-template-areas:
+		"header header header"
+		"section section section"
+		"main main aside"
+		"footer footer footer";
+}
+
+/* ------------------------------------------------------------- */
+/* -------------------------- Header --------------------------- */
+/* ------------------------------------------------------------- */
+
+header
+{
+	background-color: rgb(204, 76, 54);
+	display: grid;
+	grid-area: header;
+	grid-template-columns: 3fr 2fr;
+}
+
+header #logo {
+	font-size:  36px;
+	color: rgb(235, 235, 235);
+	padding: 5px;
+}
+
+nav
+{
+	/* No need to be used atm */
+	/* background-color: rgb(28, 218, 123);	 */
+}
+
+ul.nav-bar {
+	background-color: rgb(0, 0, 0);
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+
+    list-style-type: none;
+	border: 1px solid #555;
+    margin: 0;
+	padding: 2px;
+}
+
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Current Active nav element */
+li.nav-active {
+	text-align: center;
+	background-color: rgb(87, 137, 230);
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 10px;
+}
+
+/* Current InActive nav element */
+li.nav-block {
+    text-align: center;
+	border-bottom: 1px solid #555;	
+	border-radius: 10px;
+}
+
+li.nav-active:hover {
+	background-color: rgb(214, 16, 16);
+    color: white;
+}
+
+li a:hover:not(.active) {
+	background-color: #555;		
+	border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* ------------------------------------------------------------- */
+/* ------------------------- Section --------------------------- */
+/* ------------------------------------------------------------- */
+
+section
+{
+	background-color: rgb(194, 179, 176);
+	grid-area: section;
+	text-align: center;	
+	/* position: relative; */
+}
+
+/* Search Bar CSS */
+input[type=text] {
+    width: 240px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+
+	/* Not Working atm */
+	/* background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat; */
+	
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 30%;
+}
+
+/* ------------------------------------------------------------- */
+/* -------------------------- Main ----------------------------- */
+/* ------------------------------------------------------------- */
+main
+{
+	background-color: rgb(95, 216, 38);
+	grid-area: main;
+}
+
+/* ------------------------------------------------------------- */
+/* -------------------------- Aside ---------------------------- */
+/* ------------------------------------------------------------- */
+
+aside
+{
+	background-color: rgb(0, 36, 31);
+	grid-area: aside;
+}
+
+.aside-content {
+	text-align: center;
+}
+
+.aside-title {
+	color: rgb(196, 76, 76);
+}
+
+ul.aside-list {
+	text-align: center;
+    list-style-type: none;
+    margin: 0;
+	padding: 2px;
+}
+
+/* ------------------------------------------------------------- */
+/* ------------------------- Footer ---------------------------- */
+/* ------------------------------------------------------------- */
+
+footer
+{
+	background-color: rgb(200, 231, 21);
+	grid-area: footer;
+}
+
+/* ------------------------------------------------------------- */
+/* ------------------------ All Items -------------------------- */
+/* ------------------------------------------------------------- */
+
+/* Selecting every item in the body */
+.items
+{
+	border: 3px solid rgb(0, 0, 0);
+	border-radius: 10px;
+	padding: 5px;
+}
+
+/* ------------------------------------------------------------- */
+/* ------------------------ Scale limits ----------------------- */
+/* ------------------------------------------------------------- */
+
+/* Not yet messed around with, for future use */
+
+/* @supports (display: grid) {
+	.site {
+		grid-gap: var(--padding, 0px);
+	}
+	.header {
+		grid-area: header;
+	}
+	.section {
+		grid-area: showcase;
+	}
+	.main {
+		grid-area: main;
+	}
+	.aside {
+		grid-area: aside;
+	}
+	.footer {
+		grid-area: footer;
+	}
+	@media screen and (min-width: 400px) {
+		body {
+			font-size: 24px;
+		}
+		.showcase {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.showcase__content {
+			display: grid;
+			grid-gap: var(--padding);
+			grid-template-rows: repeat(2, 1fr);
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.showcase__content>div:first-child {
+			grid-row: 1 / span 2;
+			grid-column: 1 / span 3;
+			background-color: var(--complementary-color);
+		}
+		.aside {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.aside__content {
+			display: grid;
+			grid-gap: var(--padding);
+			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+			grid-auto-rows: 100px;
+			overflow-y: hidden;
+		}
+		.item {
+			margin-bottom: 0px;
+		}
+		.site {
+			display: grid;
+			max-width: 1000px;
+			grid-template-rows: auto 12em 1fr auto;
+		}
+	}
+	@media screen and (min-width: 400px) and (max-width: 600px) {
+		.site {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"header"
+				"showcase"
+				"main"
+				"aside"
+				"footer";
+		}
+	}
+	@media screen and (min-width: 600px) {
+		.site {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-areas:
+				"header header header"
+				"showcase showcase showcase"
+				"main main aside"
+				"footer footer footer";
+		}
+	}
+	@media screen and (min-width: 1200px) {
+		.site {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-areas:
+				"header header header"
+				"showcase showcase showcase"
+				"main main aside"
+				"footer footer aside";
+		}
+	}
+} */
