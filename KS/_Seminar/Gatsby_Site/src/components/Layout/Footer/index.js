@@ -3,6 +3,6 @@ import React from "react";
 
 export default () => (
     
-    <footer class="items">Footer</footer>
+    <footer className="items">Footer</footer>
     
 );

@@ -2,12 +2,12 @@ import React from "react";
 import Nav from "./Nav";
 import NavLink from "./NavLink";
 import Container from "../Container";
-import styles from "./styles.module.css";
+import styles from "../../../styles/styles.module.css";
 
  export default () => (
      <header className={styles.Header}>
-         <Container className={styles.Container}>
-             <span className={styles.Logo}>Sustav Za Zaposljavanje</span>
+         <Container className={styles.ContainerBox}>
+             {/* <span className={styles.Logo}>System</span> */}
              <Nav>
                  <NavLink to="/" exact="true">Home</NavLink>
                  <NavLink to="/Poslodavci/">Poslodavci</NavLink>

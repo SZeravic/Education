@@ -11,7 +11,7 @@ export default () => (
     
     <SiteContainer>
         <p>Entering .SiteContainer</p>
-        <div class="site">
+        <div className="site">
             <Header/>
             <Section/>
             <Main/>
