@@ -1,0 +1,26 @@
+{
+  "name": "gatsby-starter-hello-world",
+  "description": "Gatsby hello world starter",
+  "license": "MIT",
+  "scripts": {
+    "develop": "./node_modules/.bin/rimraf .cache/* ./public/* && gatsby develop",
+    "start": "npm run develop",
+    "build": "./node_modules/.bin/rimraf .cache/* ./public/* && gatsby build --prefix-paths",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "gatsby": "^2.0.34",
+    "gatsby-plugin-layout": "^1.0.6",
+    "gatsby-plugin-sharp": "^2.0.10",
+    "gatsby-remark-images": "^2.0.5",
+    "gatsby-source-filesystem": "^2.0.6",
+    "gatsby-transformer-remark": "^2.1.11",
+    "node-gyp": "^3.8.0",
+    "react": "^16.5.1",
+    "react-burger-menu": "^2.5.4",
+    "react-dom": "^16.5.1",
+    "react-moment": "^0.8.4",
+    "rimraf": "^2.6.2"
+  }
+}

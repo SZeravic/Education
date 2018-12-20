@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
+}
+#blog-filter {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  margin: 2% 0 0 0;
+}
+.blog-text {
+  font-size: 17pt;
+}
+.blog-filter-p {
+  grid-column: 1 / 2;
+  justify-self: flex-end;
+}
+#blog-select {
+  font-size: 17pt;
+  grid-column: 2 / 3;
+  width: 50%;
+  margin-left: 1%;
+}
+#blog-pages {
+  display: flex;
+  justify-content: flex-end;
+  margin: 3% 0;
+}
+.blog-page-label {
+  margin-right: 1%;
+}
+#blog-page-select {
+  font-size: 17pt;
+}
+@media screen and (max-width: 370px) {
+  .blog-text {
+    font-size: 9pt;
+  }
+  #blog-select {
+    font-size: 9pt;
+    min-width: 135px;
+  }
+  #blog-page-select {
+    font-size: 9pt;
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 750px) {
+  .blog-text {
+    font-size: 11pt;
+  }
+  #blog-select {
+    font-size: 11pt;
+    min-width: 168px;
+  }
+  #blog-page-select {
+    font-size: 11pt;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 860px) {
+  .blog-text {
+    font-size: 12pt;
+  }
+  #blog-select {
+    font-size: 12pt;
+  }
+  #blog-page-select {
+    font-size: 12pt;
+  }
+}
+@media screen and (min-width: 860px) and (max-width: 1030px) {
+  .blog-text {
+    font-size: 14pt;
+  }
+  #blog-select {
+    font-size: 14pt;
+  }
+  #blog-page-select {
+    font-size: 14pt;
+  }
+}

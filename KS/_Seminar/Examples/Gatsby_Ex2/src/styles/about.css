@@ -1,0 +1,83 @@
+html {
+  --beige: #f3e9d2;
+  --black: #000000;
+  --blue: #16bac5;
+  --red: rgb(223, 49, 69);
+  --white: #ffffff;
+  --padding: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
+}
+.about {
+  margin-top: 2%;
+}
+.main-heading {
+  margin: 5% 0 2% 0;
+  font-size: 19pt;
+}
+.about-p {
+  font-size: 17pt;
+}
+.link {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--black);
+}
+.link:hover {
+  color: var(--blue);
+}
+.link1 {
+  margin-bottom: 2%;
+}
+.icon {
+  height: 55px;
+  width: 55px;
+  margin-right: 2%;
+  cursor: pointer;
+}
+.email {
+  margin-bottom: 5%;
+}
+@media screen and (max-width: 370px) {
+  .main-heading {
+    font-size: 9pt;
+  }
+  .about-p {
+    font-size: 9pt;
+  }
+  * {
+    margin: 1px;
+  }
+  .email {
+    margin-bottom: 2%;
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 750px) {
+  .main-heading {
+    font-size: 12pt;
+  }
+  .about-p {
+    font-size: 11pt;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 860px) {
+  .main-heading {
+    font-size: 14pt;
+  }
+  .about-p {
+    font-size: 12pt;
+  }
+}
+@media screen and (min-width: 860px) and (max-width: 1030px) {
+  .main-heading {
+    font-size: 16pt;
+  }
+  .about-p {
+    font-size: 14pt;
+  }
+}

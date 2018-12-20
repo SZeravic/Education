@@ -1,0 +1,129 @@
+:root {
+  --beige: #f3e9d2;
+  --black: #000000;
+  --blue: #16bac5;
+  --red: rgb(223, 49, 69);
+  --white: #ffffff;
+  --padding: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
+}
+#main-img {
+  width: 100%;
+  margin: 1% 0 0;
+}
+.main {
+  margin: 2% 0 2%;
+}
+.main-p {
+  font-size: 19pt;
+  font-weight: bold;
+  margin: 10px 0 10px;
+}
+#main-start-images {
+  display: grid;
+  grid-gap: 5%;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+}
+.main-start-img {
+  justify-self: stretch;
+  align-self: stretch;
+}
+#main-skills-div {
+  display: grid;
+  grid-gap: 5%;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  margin: 0 0 5px 0;
+}
+.main-skills-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: var(--beige);
+  color: var(--black);
+  border: 1px solid var(--black);
+  padding: 5px 5px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+.main-skills-item {
+  padding: 5px;
+  font-size: 17pt;
+}
+@media screen and (max-width: 370px) {
+  .main-skills-item {
+    font-size: 9pt;
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-p {
+    font-size: 10pt;
+  }
+  * {
+    margin: 1px;
+  }
+  #main-img {
+    height: 20%;
+  }
+  #main-start-images {
+    grid-gap: 0%;
+  }
+  .main-start-img {
+    height: 90px;
+  }
+  .main-start-img:not(:first-child) {
+    margin-left: 5px;
+  }
+  #main-skills-div {
+    display: grid;
+    grid-gap: var(--padding);
+    grid-template-columns: 1fr;
+    overflow-y: hidden;
+    grid-auto-rows: auto;
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 750px) {
+  .main-skills-item {
+    font-size: 10pt;
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-p {
+    font-size: 12pt;
+  }
+  #main-img {
+    height: 25vw;
+    margin: 1% 0 0;
+  }
+  .main-start-img {
+    height: 120px;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 860px) {
+  .main-skills-item {
+    font-size: 12pt;
+  }
+  .main-p {
+    font-size: 14pt;
+  }
+  .main-start-img {
+    height: 140px;
+  }
+}
+@media screen and (min-width: 860px) and (max-width: 1030px) {
+  .main-skills-item {
+    font-size: 14pt;
+  }
+  .main-p {
+    font-size: 16pt;
+  }
+}

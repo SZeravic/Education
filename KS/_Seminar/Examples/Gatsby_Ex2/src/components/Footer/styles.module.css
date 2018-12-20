@@ -1,0 +1,38 @@
+.Footer {
+  --blue: #16bac5;
+  --white: #ffffff;
+  --text_small: 17pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: var(--text_small);
+}
+@media screen and (max-width: 370px) {
+  .Footer {
+    --text_big: 10pt;
+    --text_small: 10pt; 
+    margin: 20px 1px 0 1px;
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 750px) {
+  .Footer {
+    --text_big: 12pt;
+    --text_small: 10pt;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 860px) {
+  .Footer {
+    --text_big: 14pt;
+    --text_small: 12pt;
+  }
+}
+@media screen and (min-width: 860px) and (max-width: 1030px) {
+  .Footer {
+    --text_big: 16pt;
+    --text_small: 14pt;
+  }
+}
+

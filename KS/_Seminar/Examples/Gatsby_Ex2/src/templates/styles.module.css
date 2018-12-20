@@ -1,0 +1,14 @@
+.Post > * {
+  padding: 1.5rem 0;
+}
+
+.Post > p {
+  padding: 0;
+}
+
+.BackLink {
+  color: rgb(223, 49, 69);
+  font-size: 17pt;
+  text-decoration: underline;
+}
+

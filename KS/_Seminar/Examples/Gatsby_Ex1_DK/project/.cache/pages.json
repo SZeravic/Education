@@ -1,0 +1,57 @@
+[
+    {
+        "componentChunkName": "component---src-pages-index-js",
+        "jsonName": "index",
+        "path": "/"
+    },
+    {
+        "componentChunkName": "component---src-pages-basket-js",
+        "jsonName": "basket-587",
+        "path": "/basket/"
+    },
+    {
+        "componentChunkName": "component---src-templates-blog-post-js",
+        "jsonName": "blog-post-five-add",
+        "path": "/blog/post-five"
+    },
+    {
+        "componentChunkName": "component---src-templates-blog-post-js",
+        "jsonName": "blog-post-four-acd",
+        "path": "/blog/post-four"
+    },
+    {
+        "componentChunkName": "component---src-templates-blog-post-js",
+        "jsonName": "blog-post-one-638",
+        "path": "/blog/post-one"
+    },
+    {
+        "componentChunkName": "component---src-templates-blog-post-js",
+        "jsonName": "blog-post-three-0ca",
+        "path": "/blog/post-three"
+    },
+    {
+        "componentChunkName": "component---src-templates-blog-post-js",
+        "jsonName": "blog-post-two-99a",
+        "path": "/blog/post-two"
+    },
+    {
+        "componentChunkName": "component---cache-dev-404-page-js",
+        "jsonName": "dev-404-page-5f9",
+        "path": "/dev-404-page/"
+    },
+    {
+        "componentChunkName": "component---src-pages-news-js",
+        "jsonName": "news-014",
+        "path": "/news/"
+    },
+    {
+        "componentChunkName": "component---src-pages-products-js",
+        "jsonName": "products-6ef",
+        "path": "/products/"
+    },
+    {
+        "componentChunkName": "component---src-pages-sale-js",
+        "jsonName": "sale-4d7",
+        "path": "/sale/"
+    }
+]

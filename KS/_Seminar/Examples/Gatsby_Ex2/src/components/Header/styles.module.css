@@ -1,0 +1,174 @@
+:root {
+  --beige: #f3e9d2;
+  --black: #000000;
+  --grey: #beb5b59d;
+  --blue: #16bac5;
+  --red: rgb(223, 49, 69);
+  --white: #ffffff;
+  --padding: 10px;
+}
+
+.Header {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  position: sticky;
+  background: var(--white);
+  border-bottom: 1px solid var(--grey);
+  margin-bottom: 40px;
+}
+
+.Container {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-areas:
+    "header-img aside-top"
+    "header-img aside-bottom";
+}
+
+.Logo {
+  grid-area: header-img;
+}
+
+.Img {
+  cursor: pointer;
+  width: 30vw;
+  max-width: 392px;
+}
+
+.Aside_top {
+  grid-area: aside-top;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 5px 0 0;
+  box-sizing: border-box;
+}
+
+.Label_user {
+  color: var(--red);
+  font-size: 17pt;
+}
+
+.Aside_bottom {
+  grid-area: aside-bottom;
+}
+
+.Nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.NavLink {
+  font-size: 19pt;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--black);
+  margin: 0 9px;
+}
+
+.NavLink:first-child {
+  margin-left: 10px;
+}
+
+.NavLink__active {
+  text-decoration: underline;
+}
+
+.NavLink:hover {
+  color: var(--red);
+}
+
+@media screen and (max-width: 370px) {
+  .Container {
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "header-img aside-top"
+      "aside-bottom aside-bottom";
+  }
+  .Img {
+    width: 45vw;
+  }
+  .Account_img {
+    width: 30px;
+    height: 30px;
+  }
+  .Label_user {
+    font-size: 9pt;
+  }
+  .NavLink {
+    font-size: 9pt;
+    margin: 0 2px;
+  }
+  .Nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    box-sizing: border-box;
+    margin: 0 2px;
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 750px) {
+  .Container {
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "header-img aside-top"
+      "aside-bottom aside-bottom";
+  }
+  .Img {
+    width: 45vw;
+  }
+  .Label_user {
+    font-size: 11pt;
+  }
+  .NavLink {
+    font-size: 13pt;
+  }  
+  .Nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    box-sizing: border-box;
+    margin: 0 5px;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 860px) {
+  .Label_user {
+    font-size: 12pt;
+  }  
+  .Nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+  .NavLink {
+    margin: 0 5px;
+    font-size: 14pt;
+  }
+}
+@media screen and (min-width: 860px) and (max-width: 1030px) {
+  .Nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+  .NavLink {
+    margin: 0 5px;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .Nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+  .NavLink {
+    margin: 0 9px;
+  }
+}
