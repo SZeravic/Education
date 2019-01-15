@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './StudentList.css';
+import './studentList.css';
 import { IStudent } from '../../models/student.model'
 import StudentRow from '../studentRow/studentRow';
 
@@ -12,7 +12,7 @@ export interface StudentListProps {
 }
 
 export interface StudentListState {
-    
+    students: IStudent[];
 }
  
 class StudentList extends React.Component<StudentListProps, StudentListState> {
@@ -20,7 +20,8 @@ class StudentList extends React.Component<StudentListProps, StudentListState> {
         super(props);
         //Stateless component
         //this.state = { :  };
-        students: [],
+        //students: [],
+        this.state = { students: [] };
     }
 
     componentDidMount() {
@@ -31,18 +32,43 @@ class StudentList extends React.Component<StudentListProps, StudentListState> {
 
     fetchStudents() {
         const studentList: IStudent[] = [
-            id: 1,
-            fullName: "Jure Jurić",
-            birthdate: new Date(2000, 9, 3),
-            email: "jure.juric@gmail.com",
-            address: "Vikovarska 32",
-            phone: "0948273648",
-            faculty: "FESB",
-            marked?: false,
-        ]
+            {
+                id: 1,
+                fullName: 'Mate Matić',
+                birthdate: new Date(1995, 9, 3),
+                email: 'mmatic@fesb.hr',
+                address: 'Vukovarska 32',
+                phone: '091 111 2222',
+                faculty: 'FESB'
+            },
+            {
+                id: 2,
+                fullName: 'Ivo Ivić',
+                birthdate: new Date(1997, 4, 2),
+                email: 'iivic@fer.hr',
+                address: 'Poljička 12',
+                phone: '091 222 3333',
+                faculty: 'FER',
+                marked: true
+            },
+            {
+                id: 3,
+                fullName: 'Ana Anić',
+                birthdate: new Date(1999, 6, 21),
+                email: 'aanic@fesb.hr',
+                address: 'R. Boškovića 2',
+                phone: '091 333 4444',
+                faculty: 'FESB'
+            }
+        ];
 
         return studentList;
     }
+
+    handleStudentClick(id: number) {
+        alert(id)
+    }
+
     // render() { 
     //     return ( <div>studentList</div>);
     // }
@@ -69,6 +95,7 @@ class StudentList extends React.Component<StudentListProps, StudentListState> {
                             index={i}
                             student={student}
                             key={"studentRow"+i} // Potencijalni problemi ako koristimo 'i'
+                            studentClicked={(id) => this.handleStudentClick(id)}
                         />
                         // U reactu manupulacija DOM (Doccument object model) je jako skupo
                         // 2 verzije virtualnog DOM-a, usporede se razlike i samo se razlika prebaci u DOM
