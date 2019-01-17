@@ -1,0 +1,65 @@
+.contact {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  width: 1000px;
+  margin-bottom: auto;
+  height: 550px;
+
+  display: grid;
+  grid-template-rows: 1fr 2fr 8fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 0px;
+  border-left: 3px solid #d1d1d1;
+  border-right: 3px solid #d1d1d1;
+}
+
+#contactTitle {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin: 10px;
+  padding: 5px;
+  font-size: 30px;
+  color: black;
+}
+
+#contactEmail {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border: 3px solid #ededed;
+  margin: 10px;
+  padding: 5px;
+}
+
+#contactMsg {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  border: 3px solid #ededed;
+  margin: 10px;
+  padding: 5px;
+}
+
+#contactBtn {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  border: 3px solid #ededed;
+  margin: 10px;
+  padding: 5px;
+  margin: auto;
+}
+
+#mail {
+  border: none;
+}
