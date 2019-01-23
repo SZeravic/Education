@@ -1,0 +1,42 @@
+.Button {
+
+  cursor: pointer;
+  color: white;
+  display: none;
+  width: 50px;
+  height: 50px;
+
+  padding: 0 10px;
+  overflow-y: hidden;
+
+  z-index: 20;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+}
+.Button.open {
+  /* background: var(--color-gold, #000);
+  border: 1px solid var(--color-gold, #000); */
+}
+.Button:hover {
+  background-color: var(--nav-hover);
+}
+.Button i {
+  font-size: 20px;
+}
+
+.Content {
+  font-size: 15px;
+  font-weight: 400;
+  transition: all 0.25s linear;
+}
+
+.Content.open {
+  color: #fff;
+}
+
+@media only screen and (max-width: 850px) {
+  .Button {
+    display: block;
+  }
+}

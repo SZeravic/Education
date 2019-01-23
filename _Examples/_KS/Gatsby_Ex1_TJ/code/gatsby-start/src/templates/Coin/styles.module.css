@@ -1,0 +1,164 @@
+.view{
+    display: flex;   
+}
+.view a:hover {
+    border-bottom: 2px solid rgb(1, 134, 195);
+}
+.button {
+    position: absolute;
+    left: 0;
+    
+    color: black;
+    padding: 0.5rem 2rem;
+  }
+.button:hover {
+    border: none;
+  }
+  i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    color: white;
+    height: 15px;
+    width: 15px;
+  }
+  .arrow {
+    transform: rotate(135deg);
+    color: white;
+  }
+.Title {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.infoBox {
+    flex: 30%;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 50px;
+}
+.priceBox{
+    padding: 10px;
+    margin: 10px;
+    flex: 60%;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+.firstRow{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: 100px;
+}
+.secondRow{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid lightgray;
+}
+.thirdRow{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: 100px;
+}
+.firstRow, .secondRow, .thirdRow {
+    margin-bottom: 20px;
+}
+.firstRow, .secondRow, .thirdRow h2{
+    line-height: 1;
+}
+.coinImage {
+    max-width: 250px;
+    max-height: 250px;
+    width: 100%;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+.coinName{
+    text-align: center;
+}
+.Loader {
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto;
+    margin-top: 200px;
+    margin-right: auto; 
+    width: 100px;
+    padding: 20px;
+}
+.currentPrice {
+    text-align: center;
+
+}
+.marketCap {
+    text-align: center;
+
+}
+.totalVolume {
+    text-align: center;
+
+}
+.dailyChange {
+    text-align: center;
+
+}
+.weeklyChange {
+    text-align: center;
+
+}
+.monthlyChange {
+    text-align: center;
+
+}
+.yearlyChange {
+    text-align: center;
+
+}
+.dailyChangeCurrency {
+    text-align: center;
+
+}
+.ath {
+    text-align: center;
+
+}
+.falling {
+    color: red
+}
+.rising {
+    color: green;
+}
+
+@media screen and (max-width: 450px) {
+    
+    .view  {
+        display: block;
+    }
+    .priceBox {
+        max-width: 450px;
+        display: block;
+    }
+    .coinName {
+        text-align: auto;
+    }
+    .infoBox {
+        margin-top: 0px;
+    }
+    .firstRow,.secondRow,.thirdRow {
+        display: block;
+        height: auto;
+        padding-bottom: 15px;
+        border-bottom: 1px solid lightgray;
+    }
+    .button {
+        display: none;
+    }
+    .currentPrice, .ath, .dailyChange, .monthlyChange, .weeklyChange, .yearlyChange, .marketCap, .totalVolume {
+        padding: 10px;
+    }
+}
+

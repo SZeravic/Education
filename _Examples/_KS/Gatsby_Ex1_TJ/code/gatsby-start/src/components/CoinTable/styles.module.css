@@ -1,0 +1,126 @@
+.coinTable {
+    width: 100%;
+    align-self: center;
+    border-collapse: collapse;
+    
+}
+th {
+    padding: 10px;
+    text-align: center;
+}
+td {
+    padding: 10px;
+    text-align: center;
+}
+a {
+    color: black;
+}
+
+.coinName {
+    border-bottom: 1px solid lightgray;
+    text-align: left;
+    width: 20%;
+}
+.coinPrice {
+    border-bottom: 1px solid lightgray;
+    text-align: right;
+    width: 20%;
+
+}
+.coinTable a:hover {
+     border-bottom: 2px solid rgb(1, 134, 195);
+}
+.coinChange {
+    text-align: right;
+    border-bottom: 1px solid lightgray;
+    width: 20%;
+}
+
+.coinChange_red {
+    color: red;
+    border-bottom: 1px solid lightgray;
+    text-align: right;
+    width: 20%;
+
+}
+
+.coinChange_green {
+    color: green;
+    border-bottom: 1px solid lightgray;
+    text-align: right;
+    width: 20%;
+
+}
+.coinVolume {
+
+    border-bottom: 1px solid lightgray;
+    text-align: right;
+    width: 20%;
+}
+.coinMarketCap {
+    border-bottom: 1px solid lightgray;
+    text-align: right;
+    width: 20%;
+
+}
+.Input {
+    margin-top: 16px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 10px;
+    overflow: hidden;
+    border-width: 0;
+    color: rgb(1, 134, 195);
+    font-weight: 600;
+    width: 120px;
+    text-align: right;
+    position: relative;
+    
+  }
+  
+  .Input:hover, .Input:focus {
+    outline: none;
+    background: var(--color-grey);
+    
+  }
+  .SearchIcon {
+    
+    fill: rgb(1, 134, 195);
+    position: absolute;
+    margin-left: 2px;
+    top: 37px;
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+  
+  .InputContainer {
+    display: flex;
+    
+    margin-bottom: 1rem;
+  }
+  @keyframes anim {
+    from {width: 20px;}
+    to {width: 150px}
+  }
+  .Label {
+    position: inherit;
+    margin-left: auto;
+    display: inherit;
+  }
+
+
+@media screen and (max-width: 450px) {
+    
+    .coinChange, .coinVolume, .coinMarketCap, .coinChange_green, .coinChange_red {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 650px) {
+    .coinMarketCap {
+        display: none;
+    }
+}

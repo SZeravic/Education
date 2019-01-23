@@ -1,0 +1,74 @@
+.Header {
+    height:  57.2px;
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid var(--color-grey, #000);
+    margin-bottom: 20px;
+  }
+  
+  .Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .Logo {
+   width: 41px;
+   height: 36%;
+   padding-top: 14px;
+   display: inline-block;
+  }
+  
+  .Nav {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .NavLink,
+  .PrivateLink {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--color-primary, #000000);
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    transition: all 0.25s linear;
+  }
+  
+  .NavLink:first-child {
+    margin-left: 10px;
+  }
+  
+  .NavLink_active,
+  .NavLink:hover {
+    border-bottom: 3px solid rgb(1, 134, 195);
+  }
+
+  .PrivateLink_active,
+  .PrivateLink:hover {
+    color: rgb(1, 134, 195);
+    border-bottom: 3px solid rgb(1, 134, 195);
+}
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
+.Nav a:hover {
+  border-bottom: 3px solid rgb(1, 134, 195);
+}
+
+@media only screen and (max-width: 450px) {
+  .Nav {
+    display: none;
+  }
+}

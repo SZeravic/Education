@@ -1,0 +1,40 @@
+.Post {
+    padding-top: 2.5rem;
+    overflow: auto;
+    display: inline-grid;
+    grid-template-columns: 27% 73%;	
+  }
+   .Excerpt:hover {
+    color: gray;
+  }
+   .Date {
+    font-weight: 400;
+    color: var(--color-dark-grey, #000);
+  }
+.newsContainer {
+  overflow: hidden;
+  text-overflow: hidden;
+  clear: right;
+}
+.newsThumb {
+  width: 256px;
+  height: auto;;
+  padding-right: 0.5rem;
+  
+}
+
+
+.Title:hover {
+ color: rgb(1, 134, 195);
+}
+
+@media screen and (max-width: 1005px) {
+    
+  .newsThumb {
+    display: none;
+  }
+  .Post {
+    display: inline;
+  }
+  
+}

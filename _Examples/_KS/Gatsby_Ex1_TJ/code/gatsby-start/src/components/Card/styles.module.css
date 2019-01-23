@@ -1,0 +1,37 @@
+
+.Card {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 10px;
+	margin-top: 10px;
+	color: rgb(111, 152, 190);
+	box-shadow: 1px 1px 3px 0px #1f1f1f;
+}
+.Card>p {
+	text-align: center;
+	padding-left: 10px;
+}
+.Photo {
+	align-self: center;
+	width: 100px;
+	height: 100px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	transition: transform .2s;
+}
+.Card:hover {
+	background-color: lightgray;
+}
+.Card:hover>.Photo {
+		transform: scale(1.1);
+	}
+
+.Card>.Photo{
+	align-self: center;
+	width: 100%;
+	max-width: 150px;
+    height: 150px;
+    flex-grow: 0;
+	flex-shrink: 0;
+}
