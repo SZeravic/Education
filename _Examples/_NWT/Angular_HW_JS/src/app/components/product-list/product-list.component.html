@@ -1,0 +1,16 @@
+<ng-container *ngIf="this.products">
+    <app-product-item
+    class="w-full lg:w-1/2 flex"
+    *ngFor="let product of (products); let i = index"
+    [index]="i"
+    [product]="product"
+  >
+  </app-product-item>
+</ng-container>
+
+<div *ngIf="!this.products.length" class="w-full text-center flex-1">
+  <h4 class="text-grey-dark leading-tight">
+      Nema traženih proizvoda za pretragu
+      <span class="text-red">{{ this.searchTerm }}</span>
+  </h4>
+</div>
